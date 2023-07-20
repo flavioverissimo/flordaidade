@@ -9,7 +9,7 @@ import { database } from "../../firebase";
 export default function EditarCampanha() {
   const [formData, setFormData] = useState({ ...mainModelForm });
   const { id } = useParams();
-  const response = useGetData(`campanhas/${id}`);
+  const response = useGetData(`path/${id}`);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function EditarCampanha() {
 
   const setValues = async () => {
     try {
-      await set(ref(database, `campanhas/${id}`), formData);
+      await set(ref(database, `path/${id}`), formData);
       navigate("/admin/todascampanhas");
     } catch (err) {}
   };

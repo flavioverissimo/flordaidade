@@ -3,7 +3,7 @@ import CampanhaCard from "./donationTypes/campanhaCard";
 import HeaderCampanha from "./Header";
 
 export default function Campanhas() {
-  const data = useGetData("campanhas");
+  const data = useGetData("path");
   return (
     <section>
       <HeaderCampanha />

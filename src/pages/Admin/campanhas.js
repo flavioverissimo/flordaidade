@@ -4,11 +4,11 @@ import { ref, remove } from "firebase/database";
 import { database } from "../../firebase";
 
 export default function TodasCampanhas() {
-  const data = useGetData("campanhas");
+  const data = useGetData("path");
 
   const removeCampanha = async (evt) => {
     try {
-      await remove(ref(database, "campanhas/" + evt.target.value));
+      await remove(ref(database, "path/" + evt.target.value));
     } catch (err) {}
   };
 

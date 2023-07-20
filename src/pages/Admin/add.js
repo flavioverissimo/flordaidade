@@ -27,7 +27,7 @@ export default function NovaCampanha() {
     try {
       const date = new Date();
       const link = btoa(date.getTime());
-      await set(ref(database, `campanhas/${link}`), formData);
+      await set(ref(database, `path/${link}`), formData);
       setFormData(modelForm === "donation" ? donationModel : paymentModel);
       navigate("/admin/todascampanhas");
     } catch (err) {}
